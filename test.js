@@ -24,4 +24,22 @@ console.error('Error al obtener datos:', error);
 });
 
 
+$('#send-btn').on('click', function(event) {
+    event.preventDefault();
+    fetch('http://localhost:3000/movies/add',{
+        method: 'POST'
+    }
+    ).then(response => {
+        if (response.ok) {
+            alert('Película creada correctamente');
+        } else {
+            alert('Error al crear la película');
+        }
+        window.location.href = 'index.html';
+    }) 
+    .catch(error => {
+        console.error('Error:', error);
+    });
+});
+
 

@@ -1,6 +1,7 @@
 const movieSquema = require('../models/movies');
 
 class MoviesControllers{
+
   list(req, res){
     movieSquema.find().then(response => {
       res.send(response);
@@ -9,7 +10,8 @@ class MoviesControllers{
     });
   }
   create(req, res){
-    res.status(201).location('index.html').send("Todo correcto");
+    // res.json({ mensaje: 'Datos recibidos correctamente.'});
+    res.status(201).json({ message: 'Película creada correctamente' });
   }
 
   edit(req, res){}
