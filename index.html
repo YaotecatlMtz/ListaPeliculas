@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <link rel="stylesheet" href="/styles/generalStyles.css">
+  </head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Navbar</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="addMovie.html">Add movie</a>
+                  </li>
+                </ul>
+                <form class="d-flex">
+                  <input class="form-control me-2" type="search" placeholder="Put your movie here" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+    </header>
+    <main>
+      <Section class="col-11 col-md-10 col-lg-9 mx-auto">
+        <div id="main-container">
+        </div>
+      </Section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script id="header-template" type="text/x-handlebars-template">
+        <div class="row principal-section py-3 border-bottom border-3">
+          <div class="image col-12 col-sm-3 py-2 d-flex justify-content-center">
+            <img class="rounded img-fluid " src={{poster}} alt="">
+          </div>
+          <div class="col-12 col-sm-9">
+            <div class="row">
+            <h4 class="col-12 text-center text-sm-start">Title: {{name}}</h4>
+            <h4 class="col-12 text-center text-sm-start">Director: {{director}}</h4>
+            <h4 class="col-12 text-center text-sm-start">genre: {{genre}}</h4>
+            <h4 class="col-12 text-center text-sm-start">Duration: {{duration}} min</h4>
+            <h4 class="col-12 text-center text-sm-start">actors: {{actors}}</h4>
+            <div class="col-12 text-center text-sm-start pt-2">
+              <h4 class="">Synopsis:</h4>
+              <p>{{synopsis}}</p>
+            </div>
+            </div>
+          </div>
+        </div>
+  </script>
+  <script src="test.js"></script>
+
+  <!-- attr peliculas: portada, titulo, director, calificacion, resumen -->
+</body>
+</html>
